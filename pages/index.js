@@ -1,37 +1,67 @@
+// File: app/page.tsx (or pages/index.js if using older Next.js structure)
+
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-green-50 to-white text-center p-6">
-      <h1 className="text-4xl font-bold text-green-800 mb-4">Welcome to Metrilize</h1>
-      <p className="text-lg text-gray-700 max-w-2xl mb-6">
-        Metrilize is a professional platform for carbon and water footprint calculation, ESG metrics, and sustainability reporting.
-        Whether you're a company, institution, or consultant, Metrilize helps you track and manage your environmental impacts with precision.
-      </p>
-      <p className="text-sm text-gray-600 mb-8">
-        This platform is developed and operated as an official service of the{' '}
-        <a
-          href="https://unitedmetric.com"
-          className="text-blue-700 underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          United Metric Association
-        </a>
-        , an international NGO based in Austria dedicated to standardized sustainability metrics and transparent ESG reporting.
-      </p>
-      <div className="flex gap-4">
-        <a
-          href="/carbon"
-          className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
-        >
-          Calculate Carbon Footprint
-        </a>
-        <a
-          href="/water"
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-        >
-          Calculate Water Footprint
-        </a>
+    <div className="bg-[#003B60] text-white">
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10">
+        <div>
+          <h1 className="text-3xl font-bold text-green-300 mb-2">
+            Sustainability Insights
+          </h1>
+          <h2 className="text-2xl font-bold text-green-300 mb-6">
+            Designed Around Your Needs
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            ESG &amp; Footprint Compliance Made Simple<br />
+            Precision, Expertise, and Clarity in One Platform.
+          </p>
+          <button className="bg-white text-[#003B60] font-semibold px-6 py-3 rounded-full">
+            Start your journey
+          </button>
+        </div>
+        <div className="flex justify-center items-center">
+          <Image
+            src="/images/metrilize-hero-graphic.png"
+            alt="ESG Graphic"
+            width={500}
+            height={400}
+          />
+        </div>
       </div>
-    </main>
+
+      {/* Carbon Insight Section */}
+      <div className="bg-white text-[#003B60] py-20">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 className="text-xl font-bold mb-4">
+              Measure your Carbon footprint across your company or product without the cost or complexity.
+            </h3>
+            <p className="mb-4 text-gray-700">
+              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.
+            </p>
+            <p className="mb-6 text-gray-700">
+              Built for businesses. Trusted by experts.
+            </p>
+            <Link href="/demo">
+              <button className="bg-yellow-400 text-[#003B60] font-semibold px-6 py-3 rounded-full">
+                Book Demo
+              </button>
+            </Link>
+          </div>
+          <div className="flex justify-center">
+            <Image
+              src="/images/co2-diagram.png"
+              alt="CO2 Diagram"
+              width={400}
+              height={300}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
