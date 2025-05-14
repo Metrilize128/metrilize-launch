@@ -4,7 +4,7 @@ export default function Home() {
       {/* Hero Section 1 */}
       <div style={{ marginBottom: '60px', textAlign: 'center' }}>
         <img
-          src="/images/metrilize-hero-1.png"
+          src="/metrilize-hero-1.png"
           alt="Metrilize Hero 1"
           style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
         />
@@ -29,7 +29,7 @@ export default function Home() {
       {/* Hero Section 2 */}
       <div style={{ marginBottom: '40px', textAlign: 'center' }}>
         <img
-          src="/images/metrilize-hero-2.png"
+          src="/metrilize-hero-2.png"
           alt="Metrilize Hero 2"
           style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
         />
