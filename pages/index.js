@@ -1,67 +1,62 @@
-// File: app/page.tsx (or pages/index.js if using older Next.js structure)
-
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-[#003B60] text-white">
-      {/* Header Section */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10">
-        <div>
-          <h1 className="text-3xl font-bold text-green-300 mb-2">
-            Sustainability Insights
-          </h1>
-          <h2 className="text-2xl font-bold text-green-300 mb-6">
-            Designed Around Your Needs
-          </h2>
-          <p className="text-lg text-gray-300 mb-8">
-            ESG &amp; Footprint Compliance Made Simple<br />
-            Precision, Expertise, and Clarity in One Platform.
-          </p>
-          <button className="bg-white text-[#003B60] font-semibold px-6 py-3 rounded-full">
-            Start your journey
-          </button>
-        </div>
-        <div className="flex justify-center items-center">
-          <Image
-            src="/images/metrilize-hero-graphic.png"
-            alt="ESG Graphic"
-            width={500}
-            height={400}
-          />
-        </div>
-      </div>
-
-      {/* Carbon Insight Section */}
-      <div className="bg-white text-[#003B60] py-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h3 className="text-xl font-bold mb-4">
-              Measure your Carbon footprint across your company or product without the cost or complexity.
-            </h3>
-            <p className="mb-4 text-gray-700">
-              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.
+    <main className="bg-white">
+      {/* Hero Section 1 */}
+      <section className="relative w-full">
+        <Image
+          src="/images/metrilize-hero-1.png"
+          alt="Metrilize Hero 1"
+          layout="responsive"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <div className="text-white text-center px-6 md:px-16">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              Sustainability Insights Designed Around Your Needs
+            </h1>
+            <p className="text-lg md:text-xl mb-6">
+              ESG & Footprint Compliance Made Simple. Precision, Expertise, and Clarity in One Platform.
             </p>
-            <p className="mb-6 text-gray-700">
-              Built for businesses. Trusted by experts.
-            </p>
-            <Link href="/demo">
-              <button className="bg-yellow-400 text-[#003B60] font-semibold px-6 py-3 rounded-full">
-                Book Demo
-              </button>
+            <Link href="#">
+              <a className="bg-white text-blue-800 font-semibold px-6 py-3 rounded-full shadow">
+                Start your journey
+              </a>
             </Link>
           </div>
-          <div className="flex justify-center">
-            <Image
-              src="/images/co2-diagram.png"
-              alt="CO2 Diagram"
-              width={400}
-              height={300}
-            />
+        </div>
+      </section>
+
+      {/* Hero Section 2 */}
+      <section className="relative w-full mt-12">
+        <Image
+          src="/images/metrilize-hero-2.png"
+          alt="Metrilize Hero 2"
+          layout="responsive"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <div className="text-blue-800 text-center px-6 md:px-16">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              Measure your Carbon footprint across your company or product without the cost or complexity.
+            </h2>
+            <p className="text-lg md:text-xl mb-6">
+              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.
+              <br />
+              Built for businesses. Trusted by experts.
+            </p>
+            <Link href="#">
+              <a className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow">
+                Book Demo
+              </a>
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
