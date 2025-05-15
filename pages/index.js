@@ -1,81 +1,81 @@
 import React from 'react';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="font-sans bg-white">
+    <div className="bg-white text-gray-800">
+      {/* Navigation Bar */}
+      <nav className="flex justify-between items-center px-10 py-4 shadow-sm">
+        <img src="/logo.png" alt="Metrilize Logo" className="h-8" />
+        <ul className="flex space-x-6 text-sm font-medium">
+          <li>Products</li>
+          <li>Solutions</li>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Login</li>
+          <li>EN</li>
+          <li>
+            <button className="bg-yellow-400 px-4 py-2 rounded-full text-white font-semibold">Book Demo</button>
+          </li>
+        </ul>
+      </nav>
+
       {/* Hero Section 1 */}
-      <section className="bg-[#002C57] text-white py-16 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col items-start">
-          <div className="flex justify-between items-center w-full mb-8">
-            <img src="/logo.svg" alt="Metrilize Logo" className="h-10" />
-            <nav className="space-x-6 text-sm font-medium">
-              <a href="#" className="hover:underline">Products</a>
-              <a href="#" className="hover:underline">Solutions</a>
-              <a href="#" className="hover:underline">Pricing</a>
-              <a href="#" className="hover:underline">About</a>
-              <a href="#" className="hover:underline">Login</a>
-              <a href="#" className="hover:underline">EN</a>
-              <button className="bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full ml-4">Book Demo</button>
-            </nav>
+      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 className="text-2xl md:text-3xl font-bold text-green-300 mb-2">
+              Sustainability Insights <br /> Designed Around Your Needs
+            </h1>
+            <p className="text-base md:text-lg text-white mb-6">
+              ESG & Footprint Compliance Made Simple. <br /> Precision, Expertise, and Clarity in One Platform.
+            </p>
+            <button className="bg-white text-blue-900 px-6 py-2 rounded-full font-semibold shadow">
+              Start your journey
+            </button>
           </div>
 
-          <h2 className="text-green-300 text-xl font-bold mb-2">Sustainability Insights</h2>
-          <h1 className="text-3xl font-extrabold text-green-100 mb-4">Designed Around Your Needs</h1>
-          <p className="text-sm text-white max-w-lg mb-6">
-            ESG & Footprint Compliance Made Simple. Precision, Expertise, and Clarity in One Platform.
-          </p>
-          <button className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow">Start your journey</button>
-        </div>
-        <div className="mt-10 w-full flex justify-center">
-          <svg
-            viewBox="0 0 800 300"
-            className="w-full max-w-4xl h-auto"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="800" height="300" fill="#eaf4ff" />
-            <rect x="50" y="180" width="60" height="100" fill="#9BBBD4" />
-            <rect x="120" y="160" width="80" height="120" fill="#78A5D8" />
-            <rect x="220" y="190" width="40" height="90" fill="#6B9AC4" />
-            <polygon points="300,190 320,170 340,190" fill="#FFD93D" />
-            <rect x="310" y="190" width="20" height="90" fill="#FFC107" />
-            <circle cx="600" cy="140" r="20" fill="#90EE90" />
-            <rect x="580" y="180" width="40" height="100" fill="#2E7D32" />
-            <polygon points="700,180 720,160 740,180" fill="#4CAF50" />
-            <rect x="710" y="180" width="20" height="100" fill="#81C784" />
-            <text x="400" y="280" textAnchor="middle" fill="#333" fontSize="16">Clean Energy Cityscape</text>
-          </svg>
+          {/* Grid Visual */}
+          <div className="relative w-full h-64 md:h-80 bg-blue-700 rounded-xl overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center text-white text-sm tracking-widest">
+              <div className="grid grid-cols-3 gap-4 text-center text-xs">
+                <span className="text-yellow-300">CARBON Footprint</span>
+                <span className="text-cyan-300">LCA</span>
+                <span className="text-cyan-300">WATER Footprint</span>
+                <span className="text-yellow-400">EPD</span>
+                <span className="text-lime-300">LCC</span>
+                <span className="text-cyan-300">ESG</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Hero Section 2 */}
-      <section className="relative py-20 bg-gray-50 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h2 className="text-2xl font-extrabold text-gray-800 mb-4">
+      <section className="bg-gray-100 py-20 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          {/* Graphic with animated city + icons */}
+          <div className="relative w-full h-72 bg-gradient-to-tr from-gray-200 to-white rounded-xl shadow-md flex items-center justify-center">
+            <div className="absolute flex space-x-4 items-end">
+              <div className="w-6 h-20 bg-green-300 rounded-sm"></div>
+              <div className="w-6 h-32 bg-green-400 rounded-sm"></div>
+              <div className="w-6 h-28 bg-green-500 rounded-sm"></div>
+              <div className="w-6 h-40 bg-yellow-400 rounded-sm"></div>
+              <div className="w-6 h-48 bg-green-600 rounded-sm"></div>
+            </div>
+            <span className="absolute bottom-4 text-gray-500 text-sm">Clean Energy Cityscape</span>
+          </div>
+
+          {/* Text */}
+          <div>
+            <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
               Measure your Carbon footprint across your company or product without the cost or complexity.
             </h2>
             <p className="text-gray-600 mb-6">
-              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.<br />
-              Built for businesses. Trusted by experts.
+              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations. <br /> Built for businesses. Trusted by experts.
             </p>
-            <button className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow">Book Demo</button>
-          </div>
-          <div className="md:w-1/2">
-            <svg
-              viewBox="0 0 400 200"
-              className="w-full h-auto"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="400" height="200" fill="#F1F8E9" />
-              <circle cx="60" cy="60" r="20" fill="#AED581" />
-              <rect x="100" y="120" width="40" height="70" fill="#81C784" />
-              <rect x="160" y="110" width="30" height="80" fill="#66BB6A" />
-              <polygon points="250,140 260,120 270,140" fill="#FFB300" />
-              <rect x="255" y="140" width="10" height="60" fill="#FFA000" />
-              <text x="200" y="190" textAnchor="middle" fill="#333" fontSize="14">Factory & Energy Icons</text>
-            </svg>
+            <button className="bg-yellow-400 px-6 py-2 rounded-full text-white font-semibold">
+              Book Demo
+            </button>
           </div>
         </div>
       </section>
