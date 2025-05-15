@@ -1,63 +1,122 @@
-// pages/index.js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metrilize Homepage</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-export default function Home() {
-  return (
-    <main className="bg-[#001F3F] min-h-screen text-white font-sans">
-      {/* Header Navigation */}
-      <nav className="flex justify-between items-center px-8 py-6 text-sm">
-        <div className="text-lg font-bold">Metrilize</div>
-        <div className="flex space-x-6">
-          <a href="#" className="hover:text-yellow-400">Products</a>
-          <a href="#" className="hover:text-yellow-400">Solutions</a>
-          <a href="#" className="hover:text-yellow-400">Pricing</a>
-          <a href="#" className="hover:text-yellow-400">About</a>
-          <a href="#" className="hover:text-yellow-400">Login</a>
-          <a href="#" className="hover:text-yellow-400">EN</a>
-          <button className="ml-4 bg-yellow-400 text-[#001F3F] font-bold py-2 px-4 rounded-full hover:bg-yellow-300 transition">Book Demo</button>
-        </div>
-      </nav>
+      body {
+        font-family: 'Arial', sans-serif;
+        background: url('/factory-bg.jpg') no-repeat center center/cover;
+        height: 100vh;
+        position: relative;
+        color: #003f6a;
+      }
 
-      {/* Hero Section 1 */}
-      <section className="relative px-8 py-20 bg-[#001F3F]">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-green-400 mb-2">Sustainability Insights</h2>
-          <h3 className="text-2xl font-bold text-green-400 mb-6">Designed Around Your Needs</h3>
-          <p className="text-gray-300 mb-6">
-            ESG & Footprint Compliance Made Simple.<br />
-            Precision, Expertise, and Clarity in One Platform.
-          </p>
-          <button className="bg-white text-[#001F3F] font-semibold py-2 px-5 rounded-full hover:bg-gray-100">Start your journey</button>
-        </div>
+      nav {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        right: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        {/* Keywords Floating Text */}
-        <div className="absolute right-10 top-20 space-y-2 text-right text-xs">
-          <div className="text-green-200">CARBON Footprint</div>
-          <div className="text-cyan-400">LCA</div>
-          <div className="text-yellow-400">EPD</div>
-          <div className="text-lime-300">LCC</div>
-          <div className="text-blue-300">WATER Footprint</div>
-          <div className="text-sky-400">ESG</div>
-        </div>
-      </section>
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
 
-      {/* Hero Section 2 */}
-      <section className="relative px-8 py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
-          <div>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              Measure your Carbon footprint across your company or product without the cost or complexity.
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.<br />
-              Built for businesses. Trusted by experts.
-            </p>
-            <button className="bg-yellow-400 text-[#001F3F] font-semibold py-2 px-5 rounded-full hover:bg-yellow-300">Book Demo</button>
-          </div>
+      .nav-left img {
+        height: 40px;
+      }
 
-          {/* Placeholder for future cityscape graphic */}
-          <div className="w-full h-60 bg-[url('/images/clean-city.svg')] bg-no-repeat bg-contain bg-center"></div>
-        </div>
-      </section>
-    </main>
-  );
-}
+      .nav-right a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #003f6a;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .nav-right .btn {
+        background: #f5c518;
+        color: #003f6a;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 200px;
+        left: 60px;
+        max-width: 600px;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #002c48;
+        margin-bottom: 10px;
+      }
+
+      .hero-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #002c48;
+        margin-bottom: 20px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        color: #00a3e0;
+        margin-bottom: 20px;
+      }
+
+      .hero-text .btn-start {
+        background: #d4f1f9;
+        padding: 12px 30px;
+        border-radius: 20px;
+        color: #003f6a;
+        font-weight: bold;
+        border: none;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img src="/metrilize-logo.png" alt="Metrilize Logo" />
+      </div>
+      <div class="nav-right">
+        <a href="#">Products</a>
+        <a href="#">Solutions</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a href="#">Login</a>
+        <a href="#">EN</a>
+        <a href="#" class="btn">Book Demo</a>
+      </div>
+    </nav>
+
+    <div class="hero-text">
+      <h1>Sustainability Insights</h1>
+      <h2>Designed Around Your Needs</h2>
+      <p>
+        ESG & Footprint Compliance Made Simple.<br />
+        Precision, Expertise, and Clarity in One Platform.
+      </p>
+      <button class="btn-start">Start your journey</button>
+    </div>
+  </body>
+</html>
