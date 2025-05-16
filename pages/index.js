@@ -1,95 +1,91 @@
-import Image from 'next/image';
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="font-sans text-[#0a1b35]">
-      {/* Section 1: Factory Hero */}
+    <div className="w-full">
+      {/* Section 1: Factory */}
       <section
-        className="w-full bg-cover bg-center bg-no-repeat"
+        className="relative w-[92%] mx-auto h-screen flex items-start justify-between bg-no-repeat bg-cover bg-center"
         style={{
-          backgroundImage: "url('/factory-desktop-bg.png')",
-          height: '90vh',
-          backdropFilter: 'blur(2px)',
+          backgroundImage: `url('/factory-desktop-bg.png')`,
+          backdropFilter: 'blur(6px)',
+          backgroundColor: 'rgba(255,255,255,0.1)'
         }}
       >
-        <nav className="flex justify-between items-center px-12 py-6">
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-12 py-6">
           <img
             src="/metrilize-logo.png"
             alt="Metrilize Logo"
-            className="h-16 md:h-20 hover:scale-105 transition-transform duration-300"
+            className="h-28 hover:scale-105 transition duration-300 ease-in-out"
           />
-          <div className="hidden md:flex gap-10 text-sm md:text-base">
-            {['Products', 'Solutions', 'Pricing', 'About', 'Login', 'EN'].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="hover:bg-gray-100 px-3 py-1 rounded transition"
-              >
-                {item}
-              </a>
-            ))}
-            <button className="bg-yellow-400 text-[#0a1b35] font-bold px-5 py-2 rounded-full shadow-md hover:shadow-lg transition">
+          <div className="hidden md:flex gap-8 text-[18px] items-center">
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">Products</a>
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">Solutions</a>
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">Pricing</a>
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">About</a>
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">Login</a>
+            <a className="hover:bg-gray-100 px-3 py-1 rounded transition" href="#">EN</a>
+            <button className="bg-yellow-400 text-[#0a1b35] font-bold py-2 px-6 rounded-full">
               Book Demo
             </button>
           </div>
         </nav>
-        <div className="px-12 py-20 max-w-xl">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+        <div className="mt-40 ml-16 max-w-[600px]">
+          <h1 className="text-5xl font-bold leading-snug">
             Sustainability Insights <br /> Designed Around Your Needs
           </h1>
-          <p className="text-blue-600 text-base md:text-lg leading-relaxed mb-8">
+          <p className="mt-6 text-blue-600 text-xl leading-relaxed">
             ESG & Footprint Compliance Made Simple with Sustainability Reporting Built In. <br />
             Precision, Expertise, and Clarity in One Platform.
           </p>
-          <button className="bg-[#d4edf9] px-6 py-3 rounded-lg font-bold shadow hover:shadow-md">
+          <button className="mt-8 bg-blue-100 py-3 px-6 rounded-xl font-semibold">
             Start your journey
           </button>
         </div>
       </section>
 
-      {/* Section 2: Carbon Hero */}
+      {/* Section 2: Carbon */}
       <section
-        className="w-full bg-cover bg-center bg-no-repeat text-[#254423]"
+        className="relative w-[92%] mx-auto h-screen flex items-center justify-start bg-no-repeat bg-cover bg-center"
         style={{
-          backgroundImage: "url('/carbon-desktop-bg.png')",
-          height: '80vh',
-          backdropFilter: 'blur(2px)',
+          backgroundImage: `url('/carbon-desktop-bg.png')`,
+          backdropFilter: 'blur(6px)',
+          backgroundColor: 'rgba(255,255,255,0.1)'
         }}
       >
-        <div className="px-12 py-24 max-w-2xl">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+        <div className="ml-16 max-w-[600px]">
+          <h2 className="text-4xl font-bold text-green-900 leading-snug">
             Measure your Carbon footprint <br /> across your company or product
           </h2>
-          <p className="mb-6 text-base md:text-lg">
+          <p className="mt-4 text-green-800 text-lg leading-relaxed">
             Professional, data-driven reports that go beyond numbers delivering <br />
             clear insights and actionable recommendations. <br />
             Built for businesses. Trusted by experts.
           </p>
-          <button className="bg-[#2e5c37] text-white px-6 py-3 rounded-md font-bold hover:bg-[#254423]">
+          <button className="mt-6 bg-green-800 text-white py-3 px-6 rounded-xl font-semibold">
             Book Demo
           </button>
         </div>
       </section>
 
-      {/* Section 3: Water Hero */}
+      {/* Section 3: Water */}
       <section
-        className="w-full bg-cover bg-center bg-no-repeat text-[#185a92]"
+        className="relative w-[92%] mx-auto h-screen flex items-center justify-start bg-no-repeat bg-cover bg-center"
         style={{
-          backgroundImage: "url('/water-desktop-bg.png')",
-          height: '80vh',
-          backdropFilter: 'blur(2px)',
+          backgroundImage: `url('/water-desktop-bg.png')`,
+          backdropFilter: 'blur(6px)',
+          backgroundColor: 'rgba(255,255,255,0.1)'
         }}
       >
-        <div className="px-12 py-24 max-w-2xl">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+        <div className="ml-16 max-w-[600px]">
+          <h2 className="text-4xl font-bold text-blue-900 leading-snug">
             Understand your Water Impact <br /> From Source to Drain
           </h2>
-          <p className="mb-6 text-base md:text-lg">
+          <p className="mt-4 text-blue-800 text-lg leading-relaxed">
             Track and reduce your water footprint with clarity, <br />
-            from production to wastewater — powered by <br />
-            smart data and sustainability insights.
+            from production to wastewater — powered by <br /> smart data and sustainability insights.
           </p>
-          <button className="bg-[#26b5d9] text-white px-6 py-3 rounded-md font-bold hover:bg-[#1a9cbf]">
+          <button className="mt-6 bg-blue-500 text-white py-3 px-6 rounded-xl font-semibold">
             Book Demo
           </button>
         </div>
