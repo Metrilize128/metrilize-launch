@@ -1,85 +1,86 @@
+// pages/index.js
+
 import Image from 'next/image';
-import { useState } from 'react';
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <div className="font-sans">
-      {/* NAVIGATION BAR */}
-      <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 md:px-16 z-10">
-        <Image
-          src="/metrilize-logo.png"
-          alt="Metrilize Logo"
-          width={160}
-          height={50}
-          className="object-contain"
-        />
-        <div className="hidden lg:flex space-x-8 text-[#002C4B] font-medium text-sm items-center">
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">Products</a>
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">Solutions</a>
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">Pricing</a>
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">About</a>
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">Login</a>
-          <a href="#" className="hover:bg-gray-200 px-3 py-1 rounded-md transition">EN</a>
-          <button className="ml-4 bg-yellow-400 hover:bg-yellow-500 text-[#002C4B] font-bold px-5 py-2 rounded-full text-sm">
-            Book Demo
-          </button>
-        </div>
-        <div className="lg:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-[#002C4B] focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-        {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col space-y-2 p-4 lg:hidden">
-            <a href="#" className="text-[#002C4B]">Products</a>
-            <a href="#" className="text-[#002C4B]">Solutions</a>
-            <a href="#" className="text-[#002C4B]">Pricing</a>
-            <a href="#" className="text-[#002C4B]">About</a>
-            <a href="#" className="text-[#002C4B]">Login</a>
-            <a href="#" className="text-[#002C4B]">EN</a>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-[#002C4B] font-bold px-4 py-2 rounded-full text-sm">
+    <main className="flex flex-col">
+
+      {/* Hero Section 1 - Factory */}
+      <section className="relative h-[90vh] min-h-[700px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/factory-bg.jpg')" }}>
+        <div className="absolute inset-0 bg-black/5"></div>
+
+        {/* Navigation */}
+        <nav className="absolute top-6 left-0 right-0 mx-auto flex max-w-7xl items-center justify-between px-6">
+          <Image src="/metrilize-logo.png" alt="Metrilize Logo" width={180} height={60} />
+          <div className="hidden md:flex items-center space-x-6 text-[15px] font-medium text-[#00305A]">
+            {['Products', 'Solutions', 'Pricing', 'About', 'Login', 'EN'].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="transition rounded-md px-3 py-1 hover:bg-[#f2f2f2] hover:shadow"
+              >
+                {item}
+              </a>
+            ))}
+            <button className="rounded-full bg-[#FFD058] px-5 py-2 font-semibold text-[#00305A] hover:shadow-md">
               Book Demo
             </button>
           </div>
-        )}
-      </nav>
+        </nav>
 
-      {/* HERO SECTION */}
-      <div
-        className="h-screen w-full bg-cover bg-center pt-32 md:pt-40 px-6 md:px-20"
-        style={{ backgroundImage: 'url(/factory-bg.jpg)' }}
-      >
-        <div className="max-w-xl">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#002C4B] leading-tight">
+        {/* Content */}
+        <div className="relative z-10 mt-40 px-6 md:ml-32 max-w-xl text-[#00305A]">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Sustainability Insights <br /> Designed Around Your Needs
           </h1>
-          <p className="text-md md:text-lg text-[#00AEEF] mt-4 leading-relaxed">
-            ESG & Footprint Compliance Made Simple. <br />
+          <p className="mt-6 text-lg text-gray-700 max-w-md">
+            ESG & Footprint Compliance Made Simple<br />
+            with Sustainability Reporting Built In. <br />
             Precision, Expertise, and Clarity in One Platform.
           </p>
-          <button className="mt-6 bg-[#B6E0F2] hover:bg-[#A0D4EC] text-[#002C4B] font-semibold px-6 py-3 rounded-full text-sm md:text-base">
+          <button className="mt-6 rounded-full bg-[#C2E7F2] px-6 py-3 text-sm font-semibold text-[#00305A] hover:shadow-md">
             Start your journey
           </button>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* Hero Section 2 - Carbon */}
+      <section className="relative h-[90vh] min-h-[700px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/Carbon-bg.jpg')" }}>
+        <div className="absolute inset-0 bg-black/5"></div>
+        <div className="relative z-10 mt-32 px-6 md:ml-32 max-w-xl text-[#234F2E]">
+          <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
+            Measure your Carbon footprint <br /> across your company or product
+          </h2>
+          <p className="mt-4 text-[16px] max-w-lg text-[#234F2E]">
+            Professional, data-driven reports that go beyond numbers delivering<br />
+            clear insights and actionable recommendations. <br />
+            Built for businesses. Trusted by experts.
+          </p>
+          <button className="mt-6 rounded-md bg-[#234F2E] px-6 py-2 text-white font-semibold hover:bg-opacity-90">
+            Book Demo
+          </button>
+        </div>
+      </section>
+
+      {/* Hero Section 3 - Water */}
+      <section className="relative h-[90vh] min-h-[700px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/water-bg.jpg')" }}>
+        <div className="absolute inset-0 bg-white/20"></div>
+        <div className="relative z-10 mt-32 px-6 md:ml-32 max-w-xl text-[#007BAC]">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            Understand your Water Impact<br /> From Source to Drain
+          </h2>
+          <p className="mt-4 text-[16px] max-w-lg text-[#007BAC]">
+            Track and reduce your water footprint with clarity,<br />
+            from production to wastewater — powered by<br />
+            smart data and sustainability insights.
+          </p>
+          <button className="mt-6 rounded-md bg-[#00C2A8] px-6 py-2 text-white font-semibold hover:bg-opacity-90">
+            Book Demo
+          </button>
+        </div>
+      </section>
+
+    </main>
   );
 }
