@@ -1,58 +1,145 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
-    <div className="font-sans">
-      {/* Header Section */}
-      <header className="absolute top-0 left-0 w-full flex justify-between items-center p-6 z-10">
-        <Image src="/metrilize-logo.png" alt="Metrilize Logo" width={140} height={40} />
-        <nav className="hidden md:flex space-x-6 text-sm text-[#0B1D39] font-medium">
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">Products</a>
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">Solutions</a>
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">Pricing</a>
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">About</a>
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">Login</a>
-          <a href="#" className="hover:bg-gray-100 rounded-md px-3 py-1 transition">EN</a>
-        </nav>
-        <button className="bg-yellow-400 text-[#0B1D39] font-bold px-5 py-2 rounded-full text-sm shadow hover:bg-yellow-300">Book Demo</button>
-      </header>
+    <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0 }}>
+      {/* Section 1 - Factory Hero */}
+      <section
+        style={{
+          backgroundImage: "url('/factory-bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+          color: '#0a1b35',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}>
 
-      {/* Section 1 - Factory */}
-      <section className="relative w-full h-[80vh] bg-cover bg-center flex items-center justify-start px-8 md:px-24" style={{ backgroundImage: 'url(/factory-bg.jpg)' }}>
-        <div className="z-10 max-w-xl">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#0B1D39] leading-tight mb-4">
+        {/* Navbar */}
+        <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '30px 50px' }}>
+          <img src="/metrilize-logo.png" alt="Metrilize Logo" style={{ height: '75px' }} />
+          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', fontSize: '16px' }}>
+            {['Products', 'Solutions', 'Pricing', 'About', 'Login', 'EN'].map((item, index) => (
+              <a
+                key={index}
+                href="#"
+                style={{
+                  color: '#0a1b35',
+                  textDecoration: 'none',
+                  padding: '8px 12px',
+                  borderRadius: '6px',
+                  transition: '0.3s',
+                  backgroundColor: 'transparent'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = '#e0e0e0';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                }}
+              >
+                {item}
+              </a>
+            ))}
+            <button style={{
+              backgroundColor: '#f9c841',
+              color: '#0a1b35',
+              padding: '12px 26px',
+              borderRadius: '30px',
+              fontWeight: 'bold',
+              border: 'none',
+              cursor: 'pointer'
+            }}>
+              Book Demo
+            </button>
+          </div>
+        </nav>
+
+        {/* Hero Content */}
+        <div style={{ padding: '60px 50px', maxWidth: '620px' }}>
+          <h1 style={{ fontSize: '40px', fontWeight: 'bold', lineHeight: '1.4', marginBottom: '20px' }}>
             Sustainability Insights <br /> Designed Around Your Needs
           </h1>
-          <p className="text-[#5A5A5A] text-lg md:text-xl mb-6">
-            ESG & Footprint Compliance Made Simple with Sustainability Reporting Built In.<br />
+          <p style={{ fontSize: '20px', color: '#3c82c2', lineHeight: '1.6', marginBottom: '40px' }}>
+            ESG & Footprint Compliance Made Simple with Sustainability Reporting Built In. <br />
             Precision, Expertise, and Clarity in One Platform.
           </p>
-          <button className="bg-[#C5E6F8] text-[#0B1D39] font-bold px-6 py-3 rounded-full shadow hover:bg-[#aee2fc]">Start your journey</button>
+          <button style={{
+            backgroundColor: '#d4edf9',
+            padding: '14px 28px',
+            borderRadius: '14px',
+            fontWeight: 'bold',
+            border: 'none',
+            cursor: 'pointer'
+          }}>
+            Start your journey
+          </button>
         </div>
       </section>
 
-      {/* Section 2 - Carbon */}
-      <section className="relative w-full h-[75vh] bg-cover bg-center flex items-center px-8 md:px-24" style={{ backgroundImage: 'url(/Carbon-bg.jpg)' }}>
-        <div className="z-10 max-w-xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1D3B2C] mb-4">Measure your Carbon footprint <br /> across your company or product</h2>
-          <p className="text-[#444] mb-4 text-sm md:text-base">
-            Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations. <br />
+      {/* Section 2 - Carbon Hero */}
+      <section
+        style={{
+          backgroundImage: "url('/Carbon-bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '85vh',
+          display: 'flex',
+          alignItems: 'center',
+          color: '#1c3a1d',
+          padding: '60px 50px'
+        }}>
+        <div style={{ maxWidth: '600px' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '20px' }}>
+            Measure your Carbon footprint <br /> across your company or product
+          </h2>
+          <p style={{ fontSize: '16px', marginBottom: '30px', lineHeight: '1.6' }}>
+            Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.<br />
             Built for businesses. Trusted by experts.
           </p>
-          <button className="bg-[#224D3B] text-white font-semibold px-6 py-2 rounded-md shadow hover:bg-[#1a3e2d]">Book Demo</button>
+          <button style={{
+            backgroundColor: '#2e5d2e',
+            color: 'white',
+            padding: '12px 28px',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            border: 'none',
+            cursor: 'pointer'
+          }}>
+            Book Demo
+          </button>
         </div>
       </section>
 
-      {/* Section 3 - Water */}
-      <section className="relative w-full h-[75vh] bg-cover bg-center flex items-center px-8 md:px-24" style={{ backgroundImage: 'url(/water-bg.jpg)' }}>
-        <div className="z-10 max-w-xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#064F6C] mb-4">
+      {/* Section 3 - Water Hero */}
+      <section
+        style={{
+          backgroundImage: "url('/water-bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '85vh',
+          display: 'flex',
+          alignItems: 'center',
+          color: '#015e90',
+          padding: '60px 50px'
+        }}>
+        <div style={{ maxWidth: '600px' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '20px' }}>
             Understand your Water Impact <br /> From Source to Drain
           </h2>
-          <p className="text-[#1a1a1a] mb-4 text-sm md:text-base">
+          <p style={{ fontSize: '16px', marginBottom: '30px', lineHeight: '1.6' }}>
             Track and reduce your water footprint with clarity, from production to wastewater — powered by smart data and sustainability insights.
           </p>
-          <button className="bg-[#1EC9F3] text-white font-semibold px-6 py-2 rounded-md shadow hover:bg-[#12b9e2]">Book Demo</button>
+          <button style={{
+            backgroundColor: '#00b4d8',
+            color: 'white',
+            padding: '12px 28px',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            border: 'none',
+            cursor: 'pointer'
+          }}>
+            Book Demo
+          </button>
         </div>
       </section>
     </div>
