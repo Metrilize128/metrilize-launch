@@ -1,98 +1,54 @@
 // pages/index.js
-
-import Image from 'next/image';
-import Link from 'next/link';
-
 export default function Home() {
   return (
-    <div className="w-full overflow-x-hidden">
-      {/* Hero Section 1: Factory */}
-      <section className="relative w-[90%] max-w-screen-xl mx-auto min-h-screen flex items-center justify-center text-left">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/factory-desktop-bg.png"
-            alt="Factory Background"
-            layout="fill"
-            objectFit="cover"
-            className="blur-sm opacity-80"
-            priority
-          />
-        </div>
-        <div className="relative z-10 max-w-3xl space-y-6 text-[#0a1b35]">
-          <h1 className="text-5xl font-bold leading-tight">
-            Sustainability Insights<br />
-            Designed Around Your Needs
-          </h1>
-          <p className="text-lg">
-            ESG & Footprint Compliance Made Simple with Sustainability Reporting Built on
-            Precision, Expertise, and Clarity in One Platform.
-          </p>
-          <Link href="#">
-            <button className="bg-[#0a1b35] text-white py-3 px-6 rounded-full hover:scale-105 transition">
-              Start your journey
-            </button>
-          </Link>
+    <main className="pt-24">
+      {/* Hero 1 - Factory */}
+      <section
+        className="relative w-full min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/factory-desktop-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-[90%] max-w-4xl text-center text-[#0a1b35] backdrop-blur-sm bg-white/50 p-8 rounded-lg">
+          <h1 className="text-4xl font-extrabold mb-4">Sustainability Insights Designed Around Your Needs</h1>
+          <p className="text-lg mb-6">ESG & Footprint Compliance Made Simple with Sustainability Reporting Built on Precision, Expertise, and Clarity in One Platform.</p>
+          <button className="bg-[#0a1b35] text-white py-2 px-6 rounded-full font-medium hover:scale-105 transition">Start your journey</button>
         </div>
       </section>
 
-      {/* Hero Section 2: Carbon */}
-      <section className="relative w-[90%] max-w-screen-xl mx-auto min-h-screen flex items-center justify-center text-left">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/carbon-desktop-bg.png"
-            alt="Carbon Background"
-            layout="fill"
-            objectFit="cover"
-            className="blur-sm opacity-80"
-            priority
-          />
-        </div>
-        <div className="relative z-10 max-w-3xl space-y-6 text-[#0a1b35]">
-          <h2 className="text-4xl font-bold leading-tight">
-            Measure your carbon footprint<br />
-            across your company or product
-          </h2>
-          <p className="text-base">
-            Professional, data-driven reports that go beyond numbers delivering clear insights
-            and actionable recommendations.
-          </p>
-          <Link href="#">
-            <button className="bg-green-600 text-white py-3 px-6 rounded-full hover:scale-105 transition">
-              Book Demo
-            </button>
-          </Link>
+      {/* Hero 2 - Carbon */}
+      <section
+        className="relative w-full min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/carbon-desktop-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-[90%] max-w-4xl text-center text-[#0a1b35] backdrop-blur-sm bg-white/50 p-8 rounded-lg">
+          <h2 className="text-3xl font-bold mb-4">Measure your carbon footprint across your company or product</h2>
+          <p className="text-md mb-6">Professional, data-driven reports that go beyond numbers delivering clear insights and actionable recommendations.</p>
+          <button className="bg-green-600 text-white py-2 px-6 rounded-full font-medium hover:scale-105 transition">Book Demo</button>
         </div>
       </section>
 
-      {/* Hero Section 3: Water */}
-      <section className="relative w-[90%] max-w-screen-xl mx-auto min-h-screen flex items-center justify-center text-left">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/water-desktop-bg.png"
-            alt="Water Background"
-            layout="fill"
-            objectFit="cover"
-            className="blur-sm opacity-80"
-            priority
-          />
-        </div>
-        <div className="relative z-10 max-w-3xl space-y-6 text-[#0a1b35]">
-          <h2 className="text-4xl font-bold leading-tight">
-            Understand your Water Impact<br />
-            From Source to Drain
-          </h2>
-          <p className="text-base">
-            Track and reduce your water footprint with clarity,
-            from production to wastewater — powered by smart data
-            and sustainability insights.
-          </p>
-          <Link href="#">
-            <button className="bg-blue-600 text-white py-3 px-6 rounded-full hover:scale-105 transition">
-              Book Demo
-            </button>
-          </Link>
+      {/* Hero 3 - Water */}
+      <section
+        className="relative w-full min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/water-desktop-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-[90%] max-w-4xl text-center text-[#0a1b35] backdrop-blur-sm bg-white/50 p-8 rounded-lg">
+          <h2 className="text-3xl font-bold mb-4">Understand your Water Impact From Source to Drain</h2>
+          <p className="text-md mb-6">Track and reduce your water footprint with clarity, from production to wastewater — powered by smart data and sustainability insights.</p>
+          <button className="bg-blue-600 text-white py-2 px-6 rounded-full font-medium hover:scale-105 transition">Book Demo</button>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
